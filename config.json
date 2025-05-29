@@ -1,0 +1,12 @@
+{
+  "left": {
+    "DisplayPort 1": "http://your-mac-host.local:55777/set?tagID=1&ddcAlt=123&vcp=inputSelectAlt",
+    "HDMI 1": "http://your-mac-host.local:55777/set?tagID=1&ddcAlt=124&vcp=inputSelectAlt",
+    "HDMI 2": "http://your-mac-host.local:55777/set?tagID=1&ddcAlt=125&vcp=inputSelectAlt"
+  },
+  "right": {
+    "DisplayPort 1": "http://your-mac-host.local:55777/set?tagID=2&ddcAlt=123&vcp=inputSelectAlt",
+    "HDMI 1": "http://your-mac-host.local:55777/set?tagID=2&ddcAlt=124&vcp=inputSelectAlt",
+    "HDMI 2": "http://your-mac-host.local:55777/set?tagID=2&ddcAlt=125&vcp=inputSelectAlt"
+  }
+}
