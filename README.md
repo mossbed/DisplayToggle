@@ -59,8 +59,7 @@ DisplayToggle reads from a `config.json` file that defines:
 
 When you click a menu item from the system tray, DisplayToggle sends a request like:
 
-
-
+<pre> ```http http://your-mac-host.local:55777/set?tagID=3&ddcAlt=208&vcp=inputSelectAlt ``` </pre>
 
 If the request fails, **DisplayToggle logs the failed attempt in an `error_log.txt` file**.
 
