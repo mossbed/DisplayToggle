@@ -26,3 +26,18 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+BSD 3-Clause License
+
+---
+
+Community Spirit and Request for Contribution:
+
+DisplayToggle was created to fill a gap in Windows monitor input switching and is shared freely in the hope that it helps others.
+
+If you use this project commercially or include it in a paid product or service, we kindly ask that you:
+
+- Retain visible attribution to the original DisplayToggle project.
+- Consider contributing improvements, bug fixes, or enhancements back to the open-source community.
+
+These requests are not legally required, but reflect the generous spirit in which DisplayToggle was developed.
