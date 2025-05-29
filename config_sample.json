@@ -1,0 +1,12 @@
+{
+  "left": {
+    "DisplayPort 1": "http://{{HOST}}:55777/set?tagID={{TAGID}}&ddcAlt={{CODE}}&vcp=inputSelectAlt",
+    "HDMI 1": "http://{{HOST}}:55777/set?tagID={{TAGID}}&ddcAlt={{CODE}}&vcp=inputSelectAlt",
+    "HDMI 2": "http://{{HOST}}:55777/set?tagID={{TAGID}}&ddcAlt={{CODE}}&vcp=inputSelectAlt"
+  },
+  "right": {
+    "DisplayPort 1": "http://{{HOST}}:55777/set?tagID={{TAGID}}&ddcAlt={{CODE}}&vcp=inputSelectAlt",
+    "HDMI 1": "http://{{HOST}}:55777/set?tagID={{TAGID}}&ddcAlt={{CODE}}&vcp=inputSelectAlt",
+    "HDMI 2": "http://{{HOST}}:55777/set?tagID={{TAGID}}&ddcAlt={{CODE}}&vcp=inputSelectAlt"
+  }
+}
