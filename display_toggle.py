@@ -7,20 +7,23 @@ import os
 import sys
 import json
 
+# Determine base directory depending on whether we're running from source or a compiled executable
 if getattr(sys, 'frozen', False):
-    # Compiled into an executable
-    BASE_DIR = os.path.dirname(sys.executable)
+    # Running as a compiled executable (e.g. via PyInstaller --onefile)
+    BASE_DIR = sys._MEIPASS
+    CONFIG_PATH = os.path.dirname(sys.executable)
 else:
     # Running as a .py script
     BASE_DIR = os.path.dirname(__file__)
+    CONFIG_PATH = BASE_DIR
 
-CONFIG_FILE = os.path.join(BASE_DIR, "config.json")
+CONFIG_FILE = os.path.join(CONFIG_PATH, "config.json")
 ICON_FILE = os.path.join(BASE_DIR, "icon.ico")
+LOG_FILE = os.path.join(CONFIG_PATH, "error_log.txt")
 
+# Load URLs from config file
 with open(CONFIG_FILE, "r", encoding="utf-8") as f:
     URLS = json.load(f)
-
-LOG_FILE = os.path.join(os.path.dirname(__file__), "error_log.txt")
 
 def send_request(url):
     def _threaded():
@@ -38,7 +41,6 @@ def send_request(url):
 def make_items(side):
     def handler_factory(url):
         return lambda icon, item: send_request(url)
-
     return [Item(label, action=handler_factory(url)) for label, url in URLS[side].items()]
 
 def create_menu():
