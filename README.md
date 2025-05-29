@@ -41,7 +41,7 @@ We created DisplayToggle because there’s simply **nothing else like it for Win
 - Monitorian  
 - Twinkle Tray  
 - ClickMonitorDDC  
-- win-dcutil  
+- winddcutil  
 
 …we found none of them worked reliably for monitors requiring `ddcalt` codes.
 
