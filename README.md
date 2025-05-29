@@ -115,6 +115,14 @@ We plan to address this limitation in the next version with:
 
 ---
 
+## 🧰 Troubleshooting
+
+### 🛠 Display Not Switching?
+
+If you're trying to switch inputs and nothing happens (especially on your main display), try re-selecting the currently active input first (e.g., HDMI 1) to "wake" the HTTP server on your Mac. After doing this, try switching to your desired input again.
+
+---
+
 ## 📌 Setup Instructions
 
 1. Install [BetterDisplay Pro](https://github.com/waydabber/BetterDisplay) on your Mac.
