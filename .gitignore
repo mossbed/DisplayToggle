@@ -1,0 +1,5 @@
+.venv
+build
+dist
+display_toggle.spec
+.DS_Store
