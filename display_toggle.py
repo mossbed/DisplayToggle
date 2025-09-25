@@ -65,7 +65,7 @@ def create_menu():
         Item("Left Display", Menu(*make_items("left"))),
         Item("Center", Menu(*make_items("center"))),
         Item("Right Display", Menu(*make_items("right"))),
-        Item("MacBook", *make_button("mac")),
+        Item("MacBook", make_button("mac")),
         Item("Quit", lambda icon, item: icon.stop()),
     )
 
