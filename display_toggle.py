@@ -56,12 +56,16 @@ def make_items(side):
     ]
 
 
+def make_button(side):
+    return lambda icon, item: send_request(URLS[side])
+
+
 def create_menu():
     return Menu(
         Item("Left Display", Menu(*make_items("left"))),
         Item("Center", Menu(*make_items("center"))),
         Item("Right Display", Menu(*make_items("right"))),
-        Item("MacBook", lambda icon, item: send_request(URLS["mac"])),
+        Item("MacBook", *make_button("mac")),
         Item("Quit", lambda icon, item: icon.stop()),
     )
 
