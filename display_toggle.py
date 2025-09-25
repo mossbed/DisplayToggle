@@ -6,12 +6,14 @@ import datetime
 import os
 import sys
 import json
+import shutil
 
 # Determine base directory depending on whether we're running from source or a compiled executable
 if getattr(sys, "frozen", False):
     # Running as a compiled executable (e.g. via PyInstaller --onefile)
     BASE_DIR = sys._MEIPASS
-    CONFIG_PATH = os.path.dirname(sys.executable)
+    CONFIG_PATH = os.path.join(os.path.expanduser("~"), "Documents", "DisplayToggle")
+    APP_PATH = os.path.dirname(sys.executable)
 else:
     # Running as a .py script
     BASE_DIR = os.path.dirname(__file__)
@@ -20,6 +22,13 @@ else:
 CONFIG_FILE = os.path.join(CONFIG_PATH, "config.json")
 ICON_FILE = os.path.join(BASE_DIR, "icon.ico")
 LOG_FILE = os.path.join(CONFIG_PATH, "error_log.txt")
+
+if os.path.exists(CONFIG_PATH):
+    if not os.path.exists(CONFIG_FILE):
+        shutil.copy(os.path.join(APP_PATH, "config.json"), CONFIG_FILE)
+else:
+    os.makedirs(CONFIG_PATH)
+    shutil.copy(os.path.join(APP_PATH, "config.json"), CONFIG_FILE)
 
 # Load URLs from config file
 with open(CONFIG_FILE, "r", encoding="utf-8") as f:
