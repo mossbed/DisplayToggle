@@ -23,12 +23,13 @@ CONFIG_FILE = os.path.join(CONFIG_PATH, "config.json")
 ICON_FILE = os.path.join(BASE_DIR, "icon.ico")
 LOG_FILE = os.path.join(CONFIG_PATH, "error_log.txt")
 
-if os.path.exists(CONFIG_PATH):
-    if not os.path.exists(CONFIG_FILE):
+if getattr(sys, "frozen", False):
+    if os.path.exists(CONFIG_PATH):
+        if not os.path.exists(CONFIG_FILE):
+            shutil.copy(os.path.join(APP_PATH, "config.json"), CONFIG_FILE)
+    else:
+        os.makedirs(CONFIG_PATH)
         shutil.copy(os.path.join(APP_PATH, "config.json"), CONFIG_FILE)
-else:
-    os.makedirs(CONFIG_PATH)
-    shutil.copy(os.path.join(APP_PATH, "config.json"), CONFIG_FILE)
 
 # Load URLs from config file
 with open(CONFIG_FILE, "r", encoding="utf-8") as f:
