@@ -71,6 +71,7 @@ def make_button(side):
 
 def create_menu():
     return Menu(
+        Item("Open Config", lambda icon, item: os.startfile(CONFIG_PATH)),
         Item("Left Display", Menu(*make_items("left"))),
         Item("Center", Menu(*make_items("center"))),
         Item("Right Display", Menu(*make_items("right"))),
